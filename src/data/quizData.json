@@ -1,14 +1,40 @@
 [
   {
-    "id": 1,
-    "question": "Which hook is used to manage state in a React functional component?",
-    "options": ["useEffect", "useState", "useContext", "useReducer"],
-    "correctAnswer": "useState"
+    "id": "react-basics",
+    "title": "React JS Fundamentals",
+    "description": "Test your basic knowledge of React components, JSX, and hooks.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Which hook is used to manage state in a React functional component?",
+        "options": ["useEffect", "useState", "useContext", "useReducer"],
+        "correctAnswer": "useState"
+      },
+      {
+        "id": 2,
+        "question": "What tool is commonly used for fast bundling in modern React apps?",
+        "options": ["Webpack", "Vite", "Gulp", "Parcel"],
+        "correctAnswer": "Vite"
+      }
+    ]
   },
   {
-    "id": 2,
-    "question": "What HTML tag is used to write inline JavaScript expressions in JSX?",
-    "options": ["<script>", "{ curly braces }", "<js>", "<!-- comment -->"],
-    "correctAnswer": "{ curly braces }"
+    "id": "js-essentials",
+    "title": "JavaScript Array Methods",
+    "description": "Evaluate your understanding of map, filter, reduce, and ES6 features.",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Which method creates a new array filled with elements that pass a test?",
+        "options": ["forEach()", "map()", "filter()", "reduce()"],
+        "correctAnswer": "filter()"
+      },
+      {
+        "id": 2,
+        "question": "What does array.map() return?",
+        "options": ["A single value", "A new transformed array", "A boolean", "Undefined"],
+        "correctAnswer": "A new transformed array"
+      }
+    ]
   }
 ]
