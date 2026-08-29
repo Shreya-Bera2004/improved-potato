@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import availableTests from '../data/quizData.json';
 
 export default function DashboardPage({ user, testHistory, onStartTest }) {
-  const [activeTab, setActiveTab] = useState('tests'); // 'profile' | 'tests' | 'results'
+  const [activeTab, setActiveTab] = useState('tests');
   const navigate = useNavigate();
 
   const userHistory = testHistory.filter((item) => item.userEmail === user.email);
@@ -15,7 +15,6 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
 
   return (
     <div className="dashboard">
-      {/* Navigation Tabs */}
       <div className="tab-menu">
         <button
           className={`tab-btn ${activeTab === 'tests' ? 'active' : ''}`}
@@ -37,7 +36,6 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
         </button>
       </div>
 
-      {/* Tab 1: Available Tests */}
       {activeTab === 'tests' && (
         <div className="tab-content">
           <h2>Available Quizzes</h2>
@@ -45,7 +43,6 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
             {availableTests.map((test) => (
               <div key={test.id} className="card test-card">
                 <h3>{test.title}</h3>
-                <p>{test.description}</p>
                 <p className="test-meta">
                   Questions: <strong>{test.questions.length}</strong>
                 </p>
@@ -56,7 +53,6 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
         </div>
       )}
 
-      {/* Tab 2: Test History */}
       {activeTab === 'results' && (
         <div className="tab-content">
           <h2>Completed Test Results</h2>
@@ -80,7 +76,6 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
         </div>
       )}
 
-      {/* Tab 3: User Profile */}
       {activeTab === 'profile' && (
         <div className="tab-content">
           <div className="card profile-card">
