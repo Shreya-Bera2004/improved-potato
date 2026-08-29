@@ -6,7 +6,15 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
   const [activeTab, setActiveTab] = useState('tests');
   const navigate = useNavigate();
 
+  // Filter history for the logged-in user
   const userHistory = testHistory.filter((item) => item.userEmail === user.email);
+
+  // Calculate total score percentage across all attempted tests
+  const totalCorrect = userHistory.reduce((sum, item) => sum + item.score, 0);
+  const totalPossible = userHistory.reduce((sum, item) => sum + item.total, 0);
+  const overallPercentage = totalPossible > 0 
+    ? ((totalCorrect / totalPossible) * 100).toFixed(1) 
+    : 0;
 
   const handleLaunchTest = (test) => {
     onStartTest(test);
@@ -15,6 +23,7 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
 
   return (
     <div className="dashboard">
+      {/* Navigation Tabs */}
       <div className="tab-menu">
         <button
           className={`tab-btn ${activeTab === 'tests' ? 'active' : ''}`}
@@ -36,6 +45,7 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
         </button>
       </div>
 
+      {/* Tab 1: Available Tests */}
       {activeTab === 'tests' && (
         <div className="tab-content">
           <h2>Available Quizzes</h2>
@@ -53,6 +63,7 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
         </div>
       )}
 
+      {/* Tab 2: Test History */}
       {activeTab === 'results' && (
         <div className="tab-content">
           <h2>Completed Test Results</h2>
@@ -76,6 +87,7 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
         </div>
       )}
 
+      {/* Tab 3: User Profile */}
       {activeTab === 'profile' && (
         <div className="tab-content">
           <div className="card profile-card">
@@ -84,6 +96,13 @@ export default function DashboardPage({ user, testHistory, onStartTest }) {
               <p><strong>Name:</strong> {user.name || 'N/A'}</p>
               <p><strong>Email:</strong> {user.email}</p>
               <p><strong>Total Tests Attempted:</strong> {userHistory.length}</p>
+              <p>
+                <strong>Combined Score:</strong>{' '}
+                <span className="overall-score-badge">{overallPercentage}%</span>
+                {totalPossible > 0 && (
+                  <span className="score-subtext"> ({totalCorrect} / {totalPossible} total questions)</span>
+                )}
+              </p>
             </div>
           </div>
         </div>
