@@ -19,7 +19,7 @@ export default function LoginPage({ onLogin }) {
 
     if (validUser) {
       onLogin(validUser);
-      navigate('/start');
+      navigate('/dashboard'); // <-- Direct user to /dashboard after setting state
     } else {
       setError('Invalid email or password!');
     }
