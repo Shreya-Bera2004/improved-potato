@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "question": "Which hook is used to manage state in a React functional component?",
+    "options": ["useEffect", "useState", "useContext", "useReducer"],
+    "correctAnswer": "useState"
+  },
+  {
+    "id": 2,
+    "question": "What HTML tag is used to write inline JavaScript expressions in JSX?",
+    "options": ["<script>", "{ curly braces }", "<js>", "<!-- comment -->"],
+    "correctAnswer": "{ curly braces }"
+  }
+]
