@@ -1,39 +1,325 @@
 [
   {
-    "id": "react-basics",
-    "title": "React JS Fundamentals",
-    "description": "Test your basic knowledge of React components, JSX, and hooks.",
+    "id": "c-programming",
+    "title": "C Programming",
     "questions": [
       {
         "id": 1,
-        "question": "Which hook is used to manage state in a React functional component?",
-        "options": ["useEffect", "useState", "useContext", "useReducer"],
-        "correctAnswer": "useState"
+        "question": "What is the result of dereferencing an uninitialized pointer variable in C?",
+        "options": ["Segmentation Fault / Undefined Behavior", "Returns 0", "Compile-time error", "Allocates default stack memory"],
+        "correctAnswer": "Segmentation Fault / Undefined Behavior"
       },
       {
         "id": 2,
-        "question": "What tool is commonly used for fast bundling in modern React apps?",
-        "options": ["Webpack", "Vite", "Gulp", "Parcel"],
-        "correctAnswer": "Vite"
+        "question": "Which memory allocation function in C initializes the allocated bytes to zero?",
+        "options": ["malloc()", "calloc()", "realloc()", "alloca()"],
+        "correctAnswer": "calloc()"
+      },
+      {
+        "id": 3,
+        "question": "What occurs when an array name is passed to a standard C function parameter?",
+        "options": ["Passes by value (full copy)", "Decays into a pointer to the first element", "Throws a type error", "Creates a read-only snapshot"],
+        "correctAnswer": "Decays into a pointer to the first element"
+      },
+      {
+        "id": 4,
+        "question": "Which keyword prevents a variable from being modified after its initialization?",
+        "options": ["static", "volatile", "const", "extern"],
+        "correctAnswer": "const"
+      },
+      {
+        "id": 5,
+        "question": "What is the primary function of the 'volatile' qualifier in C?",
+        "options": ["Informs the compiler that a variable may change asynchronously", "Speeds up loop execution", "Allocates memory on heap instead of stack", "Enforces thread lock"],
+        "correctAnswer": "Informs the compiler that a variable may change asynchronously"
+      },
+      {
+        "id": 6,
+        "question": "What does the sizeof operator return when applied to a dynamically allocated pointer (e.g., int *p = malloc(10 * sizeof(int))) on a 64-bit architecture?",
+        "options": ["40 bytes", "8 bytes", "4 bytes", "10 bytes"],
+        "correctAnswer": "8 bytes"
+      },
+      {
+        "id": 7,
+        "question": "Which preprocessor directive is used to prevent multiple inclusions of header files?",
+        "options": ["#pragma once / #ifndef guard", "#include_once", "#define guard_only", "#import"],
+        "correctAnswer": "#pragma once / #ifndef guard"
+      },
+      {
+        "id": 8,
+        "question": "What is the return value of main() by default upon successful execution according to standard C convention?",
+        "options": ["0", "1", "-1", "NULL"],
+        "correctAnswer": "0"
+      },
+      {
+        "id": 9,
+        "question": "What is the default initial value of a static global variable in C if not explicitly set?",
+        "options": ["Garbage value", "0", "NULL", "Undefined"],
+        "correctAnswer": "0"
+      },
+      {
+        "id": 10,
+        "question": "Which standard file pointer corresponds to standard error stream in C?",
+        "options": ["stdin", "stdout", "stderr", "stdlog"],
+        "correctAnswer": "stderr"
       }
     ]
   },
   {
-    "id": "js-essentials",
-    "title": "JavaScript Array Methods",
-    "description": "Evaluate your understanding of map, filter, reduce, and ES6 features.",
+    "id": "dsa",
+    "title": "DSA",
     "questions": [
       {
         "id": 1,
-        "question": "Which method creates a new array filled with elements that pass a test?",
-        "options": ["forEach()", "map()", "filter()", "reduce()"],
-        "correctAnswer": "filter()"
+        "question": "What is the tightest worst-case time complexity of QuickSort when bad pivot selection occurs?",
+        "options": ["O(N log N)", "O(N^2)", "O(N)", "O(log N)"],
+        "correctAnswer": "O(N^2)"
       },
       {
         "id": 2,
-        "question": "What does array.map() return?",
-        "options": ["A single value", "A new transformed array", "A boolean", "Undefined"],
-        "correctAnswer": "A new transformed array"
+        "question": "Which data structure follows the First In, First Out (FIFO) principle?",
+        "options": ["Stack", "Queue", "Binary Tree", "Heap"],
+        "correctAnswer": "Queue"
+      },
+      {
+        "id": 3,
+        "question": "What is the time complexity to access an arbitrary element by index in an array?",
+        "options": ["O(1)", "O(N)", "O(log N)", "O(N log N)"],
+        "correctAnswer": "O(1)"
+      },
+      {
+        "id": 4,
+        "question": "Which graph traversal strategy uses a Queue for implementation?",
+        "options": ["Depth-First Search (DFS)", "Breadth-First Search (BFS)", "Dijkstra Algorithm", "Preorder Traversal"],
+        "correctAnswer": "Breadth-First Search (BFS)"
+      },
+      {
+        "id": 5,
+        "question": "What is the worst-case space complexity of a recursive Depth-First Search on a graph with V vertices?",
+        "options": ["O(1)", "O(V)", "O(E)", "O(V^2)"],
+        "correctAnswer": "O(V)"
+      },
+      {
+        "id": 6,
+        "question": "What is the maximum height difference allowed between left and right subtrees in an AVL tree balance factor?",
+        "options": ["0", "1", "2", "Unlimited"],
+        "correctAnswer": "1"
+      },
+      {
+        "id": 7,
+        "question": "Which hash table collision resolution method chains colliding elements into linked lists?",
+        "options": ["Linear Probing", "Quadratic Probing", "Separate Chaining", "Double Hashing"],
+        "correctAnswer": "Separate Chaining"
+      },
+      {
+        "id": 8,
+        "question": "What is the minimum number of comparisons needed to sort N items using comparison-based sorting in worst case?",
+        "options": ["O(N)", "O(N log N)", "O(N^2)", "O(2^N)"],
+        "correctAnswer": "O(N log N)"
+      },
+      {
+        "id": 9,
+        "question": "In a Min-Heap, where is the smallest element located?",
+        "options": ["At the leaf nodes", "At the root node", "At index N/2", "At arbitrary position"],
+        "correctAnswer": "At the root node"
+      },
+      {
+        "id": 10,
+        "question": "Which algorithm is suitable for finding single-source shortest paths in a graph with non-negative edge weights?",
+        "options": ["Floyd-Warshall", "Bellman-Ford", "Dijkstra's Algorithm", "Kruskal's Algorithm"],
+        "correctAnswer": "Dijkstra's Algorithm"
+      }
+    ]
+  },
+  {
+    "id": "react",
+    "title": "React",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What algorithm does React use to differentiate Virtual DOM trees efficiently?",
+        "options": ["Dijkstra algorithm", "Heuristic O(N) Diffing Algorithm", "Binary tree traversal", "Depth-First search"],
+        "correctAnswer": "Heuristic O(N) Diffing Algorithm"
+      },
+      {
+        "id": 2,
+        "question": "What is the purpose of the 'key' prop when rendering lists in React?",
+        "options": ["Applies unique CSS styles", "Helps React identify which items have changed, been added, or removed", "Enforces strict type checking", "Sets local state key"],
+        "correctAnswer": "Helps React identify which items have changed, been added, or removed"
+      },
+      {
+        "id": 3,
+        "question": "Which hook returns a memoized value that only recalculates when dependencies change?",
+        "options": ["useCallback", "useMemo", "useRef", "useTransition"],
+        "correctAnswer": "useMemo"
+      },
+      {
+        "id": 4,
+        "question": "What is the primary difference between useEffect and useLayoutEffect?",
+        "options": ["useLayoutEffect fires synchronously after all DOM mutations", "useEffect runs before DOM updates", "useLayoutEffect is server-side only", "There is no difference"],
+        "correctAnswer": "useLayoutEffect fires synchronously after all DOM mutations"
+      },
+      {
+        "id": 5,
+        "question": "How do you preserve a mutable value across renders without triggering a re-render?",
+        "options": ["useState", "useRef", "useContext", "useReducer"],
+        "correctAnswer": "useRef"
+      },
+      {
+        "id": 6,
+        "question": "What happens when you invoke state setter functions with unchanged primitive values?",
+        "options": ["React re-renders sub-tree", "React bails out of rendering early", "Throws an unhandled exception", "Clears component cache"],
+        "correctAnswer": "React bails out of rendering early"
+      },
+      {
+        "id": 7,
+        "question": "Which built-in React component catches JavaScript errors anywhere in their child component tree?",
+        "options": ["ErrorBoundary", "Suspense", "StrictMode", "Fragment"],
+        "correctAnswer": "ErrorBoundary"
+      },
+      {
+        "id": 8,
+        "question": "What does React's StrictMode trigger in development mode?",
+        "options": ["Double-invokes component render cycles and effects to surface side-effects", "Enforces TypeScript rules", "Disables console warnings", "Forces production build compilation"],
+        "correctAnswer": "Double-invokes component render cycles and effects to surface side-effects"
+      },
+      {
+        "id": 9,
+        "question": "What is the primary use case of the React.lazy() function?",
+        "options": ["Lazy load component code bundles via dynamic imports", "Delay state updates", "Debounce input events", "Cache HTTP responses"],
+        "correctAnswer": "Lazy load component code bundles via dynamic imports"
+      },
+      {
+        "id": 10,
+        "question": "Which hook is designed to manage complex state logic involving multiple sub-values?",
+        "options": ["useState", "useReducer", "useImperativeHandle", "useDeferredValue"],
+        "correctAnswer": "useReducer"
+      },
+      {
+        "id": 11,
+        "question": "What wrapper is required to wrap lazy-loaded components to provide fallback UI?",
+        "options": ["<React.Fragment>", "<Suspense>", "<Provider>", "<Portal>"],
+        "correctAnswer": "<Suspense>"
+      },
+      {
+        "id": 12,
+        "question": "How do portals render children in React?",
+        "options": ["Into a DOM node that exists outside the DOM hierarchy of the parent component", "Directly into iframe elements", "Through WebSockets", "Inside Web Workers"],
+        "correctAnswer": "Into a DOM node that exists outside the DOM hierarchy of the parent component"
+      },
+      {
+        "id": 13,
+        "question": "What is synthetic event in React?",
+        "options": ["A cross-browser wrapper around the browser's native event", "A simulated server-sent event", "A custom WebSocket payload", "A deprecated event system"],
+        "correctAnswer": "A cross-browser wrapper around the browser's native event"
+      },
+      {
+        "id": 14,
+        "question": "What hook allows non-blocking state updates by marking updates as low-priority transitions?",
+        "options": ["useDeferredValue", "useTransition", "useId", "useSyncExternalStore"],
+        "correctAnswer": "useTransition"
+      },
+      {
+        "id": 15,
+        "question": "What is prop drilling in React architecture?",
+        "options": ["Passing props down through multiple nested levels of components", "Validating prop types at runtime", "Mutating props directly", "Fetching props asynchronously"],
+        "correctAnswer": "Passing props down through multiple nested levels of components"
+      }
+    ]
+  },
+  {
+    "id": "machine-learning",
+    "title": "Machine Learning",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What condition occurs when a machine learning model fits training data extremely well but generalizes poorly to new data?",
+        "options": ["Underfitting", "Overfitting", "Convergence", "Gradient Vanishing"],
+        "correctAnswer": "Overfitting"
+      },
+      {
+        "id": 2,
+        "question": "Which algorithm is an unsupervised learning technique used for clustering data points?",
+        "options": ["Linear Regression", "K-Means", "Logistic Regression", "Random Forest"],
+        "correctAnswer": "K-Means"
+      },
+      {
+        "id": 3,
+        "question": "What evaluation metric is calculated as True Positives divided by (True Positives + False Negatives)?",
+        "options": ["Precision", "Recall (Sensitivity)", "F1 Score", "Specificity"],
+        "correctAnswer": "Recall (Sensitivity)"
+      },
+      {
+        "id": 4,
+        "question": "Which regularizer adds absolute values of coefficients as penalty terms to the loss function?",
+        "options": ["L2 Regularization (Ridge)", "L1 Regularization (Lasso)", "ElasticNet", "Dropout"],
+        "correctAnswer": "L1 Regularization (Lasso)"
+      },
+      {
+        "id": 5,
+        "question": "What activation function maps real numbers strictly to the interval (0, 1)?",
+        "options": ["ReLU", "Sigmoid", "Tanh", "Leaky ReLU"],
+        "correctAnswer": "Sigmoid"
+      },
+      {
+        "id": 6,
+        "question": "What is the primary mathematical mechanism used to update weights in neural networks during training?",
+        "options": ["Principal Component Analysis", "Backpropagation with Gradient Descent", "Singular Value Decomposition", "Markov Chain Monte Carlo"],
+        "correctAnswer": "Backpropagation with Gradient Descent"
+      },
+      {
+        "id": 7,
+        "question": "Which dimensionality reduction technique finds orthogonal axes maximizing data variance?",
+        "options": ["t-SNE", "Principal Component Analysis (PCA)", "LDA", "Autoencoders"],
+        "correctAnswer": "Principal Component Analysis (PCA)"
+      },
+      {
+        "id": 8,
+        "question": "What is the main objective function minimized in Logistic Regression?",
+        "options": ["Mean Squared Error", "Binary Cross-Entropy Loss (Log Loss)", "Hinge Loss", "Absolute Error"],
+        "correctAnswer": "Binary Cross-Entropy Loss (Log Loss)"
+      },
+      {
+        "id": 9,
+        "question": "Which technique combines predictions from multiple decision trees using bootstrap aggregation?",
+        "options": ["AdaBoost", "Bagging (Random Forest)", "Gradient Boosting", "Stochastic Gradient Descent"],
+        "correctAnswer": "Bagging (Random Forest)"
+      },
+      {
+        "id": 10,
+        "question": "What does the Bias-Variance tradeoff dictate?",
+        "options": ["High bias causes overfitting, high variance causes underfitting", "High bias causes underfitting, high variance causes overfitting", "Bias and variance increase simultaneously", "Variance is unaffected by model complexity"],
+        "correctAnswer": "High bias causes underfitting, high variance causes overfitting"
+      },
+      {
+        "id": 11,
+        "question": "What issue does the ReLU activation function mitigate compared to Sigmoid in deep networks?",
+        "options": ["Exploding gradients", "Vanishing Gradient Problem", "Dead neurons", "Overfitting"],
+        "correctAnswer": "Vanishing Gradient Problem"
+      },
+      {
+        "id": 12,
+        "question": "What type of learning relies on reward signals provided by an environment?",
+        "options": ["Supervised Learning", "Unsupervised Learning", "Reinforcement Learning", "Semi-supervised Learning"],
+        "correctAnswer": "Reinforcement Learning"
+      },
+      {
+        "id": 13,
+        "question": "What is a Confusion Matrix used to summarize?",
+        "options": ["Feature importances", "Classification model performance across class predictions", "Gradient decay rates", "Loss function convergence"],
+        "correctAnswer": "Classification model performance across class predictions"
+      },
+      {
+        "id": 14,
+        "question": "In SVM algorithms, what does the hyper-parameter 'C' control?",
+        "options": ["Kernel type", "Trade-off between smooth decision boundary and classifying training points correctly", "Learning rate of optimizer", "Number of trees"],
+        "correctAnswer": "Trade-off between smooth decision boundary and classifying training points correctly"
+      },
+      {
+        "id": 15,
+        "question": "What technique randomly deactivates nodes during neural network training to prevent co-adaptation?",
+        "options": ["Batch Normalization", "Dropout", "Early Stopping", "Gradient Clipping"],
+        "correctAnswer": "Dropout"
       }
     ]
   }
