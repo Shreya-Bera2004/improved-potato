@@ -390,3 +390,15 @@ button:disabled {
 .card p a:hover {
   color: #c084fc; /* Bright purple on hover */
 }
+
+/* Profile Overall Score Styling */
+.overall-score-badge {
+  color: #818cf8;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.score-subtext {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
