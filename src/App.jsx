@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
@@ -70,54 +70,64 @@ export default function App() {
       </header>
 
       <Routes>
-        <Route path="/login" element={<LoginPage onLogin={setUser} />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute user={user}>
-              <DashboardPage
-                user={user}
-                testHistory={testHistory}
-                onStartTest={handleStartTest}
-              />
-            </ProtectedRoute>
-          }
+  {/* Root Route: If logged in go to dashboard, else go to login */}
+  <Route
+    path="/"
+    element={user ? <Navigate to="/dashboard" replace /> : <LoginPage onLogin={setUser} />}
+  />
+
+  <Route path="/login" element={user ? <Navigate to="/dashboard" replace /> : <LoginPage onLogin={setUser} />} />
+  <Route path="/register" element={<RegisterPage />} />
+
+  <Route
+    path="/dashboard"
+    element={
+      <ProtectedRoute user={user}>
+        <DashboardPage
+          user={user}
+          testHistory={testHistory}
+          onStartTest={handleStartTest}
         />
-        <Route
-          path="/quiz"
-          element={
-            <ProtectedRoute user={user}>
-              <QuizPage
-                activeTest={activeTest}
-                onSelectAnswer={handleSelectAnswer}
-                answers={answers}
-              />
-            </ProtectedRoute>
-          }
+      </ProtectedRoute>
+    }
+  />
+  
+  <Route
+    path="/quiz"
+    element={
+      <ProtectedRoute user={user}>
+        <QuizPage
+          activeTest={activeTest}
+          onSelectAnswer={handleSelectAnswer}
+          answers={answers}
         />
-        <Route
-          path="/review"
-          element={
-            <ProtectedRoute user={user}>
-              <ReviewPage
-                activeTest={activeTest}
-                answers={answers}
-                onFinalSubmit={handleFinalSubmit}
-              />
-            </ProtectedRoute>
-          }
+      </ProtectedRoute>
+    }
+  />
+  <Route
+    path="/review"
+    element={
+      <ProtectedRoute user={user}>
+        <ReviewPage
+          activeTest={activeTest}
+          answers={answers}
+          onFinalSubmit={handleFinalSubmit}
         />
-        <Route
-          path="/result"
-          element={
-            <ProtectedRoute user={user}>
-              <ResultPage activeTest={activeTest} answers={answers} />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="*" element={<LoginPage onLogin={setUser} />} />
-      </Routes>
+      </ProtectedRoute>
+    }
+  />
+  <Route
+    path="/result"
+    element={
+      <ProtectedRoute user={user}>
+        <ResultPage activeTest={activeTest} answers={answers} />
+      </ProtectedRoute>
+    }
+  />
+
+  {/* Catch all fallback */}
+  <Route path="*" element={<Navigate to={user ? "/dashboard" : "/login"} replace />} />
+</Routes>
     </div>
   );
 }
