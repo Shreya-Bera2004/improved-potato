@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "question": "What does HTML stand for?",
+    "options": [
+      "Hyper Text Markup Language",
+      "High Text Machine Language",
+      "Hyperlinks Text Mark Language",
+      "Home Tool Markup Language"
+    ],
+    "answer": "Hyper Text Markup Language"
+  },
+  {
+    "id": 2,
+    "question": "Which language is used to style web pages?",
+    "options": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python"
+    ],
+    "answer": "CSS"
+  },
+  {
+    "id": 3,
+    "question": "Which language is used to make web pages interactive?",
+    "options": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SQL"
+    ],
+    "answer": "JavaScript"
+  },
+  {
+    "id": 4,
+    "question": "Which of the following is a JavaScript framework/library?",
+    "options": [
+      "React",
+      "MySQL",
+      "MongoDB",
+      "Apache"
+    ],
+    "answer": "React"
+  },
+  {
+    "id": 5,
+    "question": "Which command is commonly used to start a Vite React project?",
+    "options": [
+      "npm start",
+      "npm run dev",
+      "npm run react",
+      "node start"
+    ],
+    "answer": "npm run dev"
+  }
+]
